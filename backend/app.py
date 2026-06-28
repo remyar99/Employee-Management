@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 app.config.from_object(Config)
-
+print(app.config["SQLALCHEMY_DATABASE_URI"])
 db.init_app(app)
 
 with app.app_context():
@@ -15,5 +15,5 @@ with app.app_context():
 
 register_routes(app)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
