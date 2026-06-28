@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "http://13.60.9.174:5000";
 
 export async function getEmployees() {
 
