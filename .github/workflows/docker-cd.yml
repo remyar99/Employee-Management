@@ -1,7 +1,7 @@
 name: CD pipeline
 on:
   workflow_run: 
-    workflows: ["docker"]
+    workflows: ["Docker CI Pipeline"]
     types: 
      completed
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: current directory
         run: pwd
-      - - name: Pull Latest Images
+      - name: Pull Latest Images
         run: |
           cd /home/ubuntu/proj/Employee-Management
           docker compose -f docker-compose.prod.yml pull
